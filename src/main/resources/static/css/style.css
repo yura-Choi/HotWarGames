@@ -1,0 +1,21 @@
+body {
+    background-image: url('../image/background.jpg');
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    background-size: auto 100%;
+}
+p.title {
+    text-align: center;
+    color: red;
+}
+table {
+    border: 0 1px lightgray;
+    background-color: #474d54;
+    color: white;
+}
+tr {
+    text-align: center;
+    margin: 10px;
+}
+a { cursor: pointer; }
+a:link, a:visited { color: white; }
