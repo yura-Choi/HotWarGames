@@ -118,12 +118,21 @@ function updateItem(element, id){
     var review = $(elements).eq(2);
     var url = $(elements).eq(3);
 
+    var check1 = "", check2 = "", check3 = "", check4 = "", check5 = "";
+    switch(type.text()){
+        case "Reversing": check1 = "selected"; break;
+        case "Web": check2 = "selected"; break;
+        case "Pwnable": check3 = "selected"; break;
+        case "Forensics": check4 = "selected"; break;
+        case "MISC": check5 = "selected"; break;
+    }
+
     var type_input = "<select class='form-select form-select-sm' aria-label='.form-select-sm' id='m_type' style='width:auto;'>";
-    type_input += "<option value='1'>Reversing</option>";
-    type_input += "<option value='2'>Web</option>";
-    type_input += "<option value='3'>Pwnable</option>";
-    type_input += "<option value='4'>Forensics</option>";
-    type_input += "<option value='5'>MISC</option>";
+    type_input += "<option value='1' "+check1+">Reversing</option>";
+    type_input += "<option value='2' "+check2+">Web</option>";
+    type_input += "<option value='3' "+check3+">Pwnable</option>";
+    type_input += "<option value='4' "+check4+">Forensics</option>";
+    type_input += "<option value='5' "+check5+">MISC</option>";
     type_input += "</select>";
 
     type.html(type_input);
